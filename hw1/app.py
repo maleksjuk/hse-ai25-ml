@@ -8,7 +8,8 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
 FILE_FORMAT = '.pkl'
-MODEL_DIR = Path(__file__).resolve().parent / "models"
+PROJECT_DIR = Path(__file__).resolve().parent
+MODEL_DIR = PROJECT_DIR / "models"
 FEATURE_NAMES_SUFFIX = "_feature_names"
 SCALER_SUFFIX = "_scaler"
 DEFAULT_MODEL_NAME = "ElasticNet_alpha_0.70_l1_ratio_0.80"
@@ -86,8 +87,8 @@ if __name__ == "__main__":
 
     # EDA
     st.subheader("Графики EDA")
-    st.image('images/corr.png', 'Матрица корреляций по тренировочным данным')
-    st.image('images/pairplot.png', 'Матрица попарных зависимостей по тренировочным данным')
+    st.image(PROJECT_DIR / 'images/corr.png', 'Матрица корреляций по тренировочным данным')
+    st.image(PROJECT_DIR / 'images/pairplot.png', 'Матрица попарных зависимостей по тренировочным данным')
 
 
     # input data
